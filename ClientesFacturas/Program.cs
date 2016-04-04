@@ -27,15 +27,32 @@ namespace ClientesFacturas
                 new Factura(4, 3, 1004)
             };
 
-
+            //Query syntax
             var results = from c in Clientes
                           join f in Facturas on c.id equals f.idCliente
                           group  new { c, f } by new { c.name/*, f.idCliente*/ }
                           into fc
                           select new { fc.First().c.name, totalImporte = fc.Sum(x => x.f.importe), idFact = fc.Count() }; // this is where I am not sure what to do
 
+            foreach (var item in results)
+            {
+                Console.WriteLine(item);
+            }
 
-            foreach(var item in results)
+            Console.WriteLine("\n");
+
+            //Method syntax
+            var results2 = Facturas.Join(Clientes,
+                            f => f.idCliente,
+                            c => c.id,
+                            (f, c) => new
+                            {
+                                Facturas = f,
+                                Clientes = c
+                            }).GroupBy(c => c.Clientes, c => c.Facturas)
+                            .Select(c => new { Sum = c.Sum(x => x.importe), Nombre = c.Key.name, Count = c.Count() });
+
+            foreach(var item in results2)
             {
                 Console.WriteLine(item);
             }
