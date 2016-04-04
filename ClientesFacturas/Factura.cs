@@ -21,5 +21,10 @@ namespace ClientesFacturas
             importe = importParam;
             date = DateTime.Now;
         }
+
+        public static IEnumerable<Factura> GetPage(IEnumerable<Factura> factura, int paginas, int totalPorPagina)
+        {
+            return factura.Skip((paginas - 1) * totalPorPagina).Take(totalPorPagina);
+        }
     }
 }

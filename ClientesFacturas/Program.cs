@@ -56,6 +56,17 @@ namespace ClientesFacturas
             {
                 Console.WriteLine(item);
             }
+
+            //var factura = new Factura(1, 2, 2000);
+            //var factura = Facturas;
+            var v = Factura.GetPage(Facturas, 1, 2);
+            foreach(var i in v)
+            {
+                Console.WriteLine(i.id);
+            }
+
         }
+
+        
     }
 }
