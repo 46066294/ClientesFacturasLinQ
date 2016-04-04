@@ -1,0 +1,6 @@
+c:\users\admin\documents\visual studio 2012\Projects\ClientesFacturas\ClientesFacturas\bin\Debug\ClientesFacturas.exe.config
+c:\users\admin\documents\visual studio 2012\Projects\ClientesFacturas\ClientesFacturas\bin\Debug\ClientesFacturas.exe
+c:\users\admin\documents\visual studio 2012\Projects\ClientesFacturas\ClientesFacturas\bin\Debug\ClientesFacturas.pdb
+c:\users\admin\documents\visual studio 2012\Projects\ClientesFacturas\ClientesFacturas\obj\Debug\ClientesFacturas.csprojResolveAssemblyReference.cache
+c:\users\admin\documents\visual studio 2012\Projects\ClientesFacturas\ClientesFacturas\obj\Debug\ClientesFacturas.exe
+c:\users\admin\documents\visual studio 2012\Projects\ClientesFacturas\ClientesFacturas\obj\Debug\ClientesFacturas.pdb
